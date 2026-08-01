@@ -1,0 +1,30 @@
+{
+  "provider": "snappr",
+  "sources": [
+    "snappr-availability-api-openapi.yml",
+    "snappr-bookings-api-openapi.yml",
+    "snappr-coverage-api-openapi.yml",
+    "snappr-editing-job-types-api-openapi.yml",
+    "snappr-editing-jobs-api-openapi.yml",
+    "snappr-images-api-openapi.yml",
+    "snappr-presets-api-openapi.yml",
+    "snappr-shoot-types-api-openapi.yml",
+    "snappr-videos-api-openapi.yml"
+  ],
+  "outputs": [
+    "snappr-availability-api-openapi.yml",
+    "snappr-bookings-api-openapi.yml",
+    "snappr-coverage-api-openapi.yml",
+    "snappr-editing-job-types-api-openapi.yml",
+    "snappr-editing-jobs-api-openapi.yml",
+    "snappr-images-api-openapi.yml",
+    "snappr-presets-api-openapi.yml",
+    "snappr-shoot-types-api-openapi.yml",
+    "snappr-videos-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

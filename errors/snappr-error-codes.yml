@@ -1,0 +1,55 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.snappr.com/
+docs: https://docs.snappr.com/#errors
+format: named-error
+envelope:
+  description: >-
+    Errors return an HTTP status plus a named error. Validation errors include a
+    'Problems' field in the response body detailing the failed validations.
+  fields: [name, message, problems]
+errors:
+  - status: 400
+    name: SyntaxError
+    description: Request body has incorrect formatting. Most likely invalid JSON.
+  - status: 400
+    name: InvalidAPIVersion
+    description: Requested an invalid API version.
+  - status: 400
+    name: UnsupportedVersion
+    description: Requested an API version that is unsupported by the requested route.
+  - status: 400
+    name: NotImplemented
+    description: Requested a feature that is not currently implemented.
+  - status: 400
+    name: ValidationError
+    description: Validation failure. See the 'Problems' field in the response.
+  - status: 400
+    name: Conflict
+    description: Request has a conflict with existing data.
+  - status: 400
+    name: NotAvailable
+    description: Requested resource is not available in your region or for the requested date/time.
+  - status: 400
+    name: NoCoverage
+    description: There is no Snappr coverage on the requested latitude/longitude for the shoottype.
+  - status: 401
+    name: Unauthorized
+    description: Provided access token is invalid or does not have access to the requested resource.
+  - status: 402
+    name: InsufficientCredits
+    description: The account does not have a sufficient credit balance to perform the request. Add more credits in the GUI.
+  - status: 404
+    name: NotFound
+    description: Requested resource not found.
+  - status: 429
+    name: RateLimit
+    description: >-
+      The rate limit of the provided access token has been reached. Respect the
+      X-RateLimit-Remaining header included on API responses.
+  - status: 500
+    name: ServerError
+    description: There was an issue with the server. Try again later.
+  - status: 400
+    name: UnknownError
+    description: An error occurred that is not a server error and is not described elsewhere.

@@ -1,0 +1,29 @@
+# Snappr
+
+> Snappr is a universal API for commissioning and handling visual content: on-demand photography with Snappr network photographers across 90% of the English-speaking world, automated and human-augmented photo editing services, and retrieval of the resulting images and videos. The API is available only to Snappr for Enterprise customers. Authentication is a bearer API key; base URL https://api.snappr.com (sandbox https://sandbox.snappr.com).
+
+## APIs
+- [Snappr API Documentation](https://docs.snappr.com/): Full REST reference (coverage, availability, bookings, editing jobs, presets, images, videos, shoot types, webhooks).
+- [Snappr for Enterprise](https://www.snappr.com/enterprise): Enterprise product and API access.
+
+## Specs
+- [OpenAPI 3.1 (generated)](https://raw.githubusercontent.com/api-evangelist/snappr/refs/heads/main/openapi/snappr-openapi.yml): 14 operations, faithfully generated from the docs.
+
+## Docs
+- [Authentication](authentication/snappr-authentication.yml): Bearer API key in the Authorization header.
+- [Conventions](conventions/snappr-conventions.yml): Pagination (limit/offset), versioning header (accept-version), rate limiting (X-RateLimit-Remaining).
+- [Error codes](errors/snappr-error-codes.yml): Named error catalog (400/401/402/404/429/500).
+- [Lifecycle](lifecycle/snappr-lifecycle.yml): Versioning + status page (https://snappr.statuspage.io).
+- [Sandbox](sandbox/snappr-sandbox.yml): Testing environment at https://sandbox.snappr.com.
+- [Webhooks](asyncapi/snappr-webhooks.yml): Booking created/updated POST callbacks.
+- [Data model](data-model/snappr-data-model.yml): Booking, EditingJob, Preset, Image, Video entities.
+
+## Agent
+- [MCP tools (candidate)](mcp/snappr-mcp.yml): 14 tools derived from the OpenAPI operations.
+- [Agent Skills](skills/_index.yml): Book a photoshoot, retrieve assets, run an editing job.
+
+## Optional
+- [Pricing](https://www.snappr.com/pricing)
+- [Blog](https://www.snappr.com/blog)
+- [Status](https://snappr.statuspage.io)
+- [GitHub](https://github.com/snappr)

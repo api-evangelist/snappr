@@ -1,8 +1,28 @@
 aid: snappr
 name: Snappr
-description: 'Snappr is a company surfaced as a portfolio company of foundry-group and added to the API
-  Evangelist network as a stub for enrichment. Sector: marketplace. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Snappr is an on-demand visual content marketplace that connects businesses
+  with a global network of professional photographers and videographers, plus
+  automated and human-augmented photo editing services. The Snappr API (the "API
+  for visual content", available to Snappr for Enterprise customers) lets
+  developers programmatically check coverage and availability, book photoshoots,
+  submit photo editing jobs against presets, and retrieve the resulting images
+  and videos. Authentication is a bearer API key; a sandbox environment mirrors
+  production for testing, and custom webhooks notify on booking changes. Backed
+  by Foundry Group and surfaced into the API Evangelist network for enrichment.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/5ca95f7a3be192f65a7b4e4f/6993a952a20874ef53a0524e_snappr-og-photography-and-videography.jpg
 url: https://raw.githubusercontent.com/api-evangelist/snappr/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,16 +32,341 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Marketplace
-apis: []
+- Photography
+- Videography
+- Visual Content
+- Photo Editing
+- On-Demand
+- Enterprise
+apis:
+- aid: snappr:snappr-availability-api
+  name: Snappr Availability API
+  description: Check available shoot start times.
+  humanURL: https://docs.snappr.com/
+  baseURL: https://api.snappr.com
+  tags:
+  - Availability
+  properties:
+  - type: OpenAPI
+    url: openapi/snappr-availability-api-openapi.yml
+  - type: Documentation
+    url: https://docs.snappr.com/
+  - type: APIReference
+    url: https://docs.snappr.com/
+  - type: Authentication
+    url: authentication/snappr-authentication.yml
+  - type: Conventions
+    url: conventions/snappr-conventions.yml
+  - type: ErrorCatalog
+    url: errors/snappr-error-codes.yml
+  - type: Lifecycle
+    url: lifecycle/snappr-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/snappr-sandbox.yml
+  - type: Webhooks
+    url: asyncapi/snappr-webhooks.yml
+  - type: DataModel
+    url: data-model/snappr-data-model.yml
+  - type: Conformance
+    url: conformance/snappr-conformance.yml
+- aid: snappr:snappr-bookings-api
+  name: Snappr Bookings API
+  description: Create and retrieve photoshoot bookings.
+  humanURL: https://docs.snappr.com/
+  baseURL: https://api.snappr.com
+  tags:
+  - Bookings
+  properties:
+  - type: OpenAPI
+    url: openapi/snappr-bookings-api-openapi.yml
+  - type: Documentation
+    url: https://docs.snappr.com/
+  - type: APIReference
+    url: https://docs.snappr.com/
+  - type: Authentication
+    url: authentication/snappr-authentication.yml
+  - type: Conventions
+    url: conventions/snappr-conventions.yml
+  - type: ErrorCatalog
+    url: errors/snappr-error-codes.yml
+  - type: Lifecycle
+    url: lifecycle/snappr-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/snappr-sandbox.yml
+  - type: Webhooks
+    url: asyncapi/snappr-webhooks.yml
+  - type: DataModel
+    url: data-model/snappr-data-model.yml
+  - type: Conformance
+    url: conformance/snappr-conformance.yml
+- aid: snappr:snappr-coverage-api
+  name: Snappr Coverage API
+  description: Check Snappr coverage for a location and shoot type.
+  humanURL: https://docs.snappr.com/
+  baseURL: https://api.snappr.com
+  tags:
+  - Coverage
+  properties:
+  - type: OpenAPI
+    url: openapi/snappr-coverage-api-openapi.yml
+  - type: Documentation
+    url: https://docs.snappr.com/
+  - type: APIReference
+    url: https://docs.snappr.com/
+  - type: Authentication
+    url: authentication/snappr-authentication.yml
+  - type: Conventions
+    url: conventions/snappr-conventions.yml
+  - type: ErrorCatalog
+    url: errors/snappr-error-codes.yml
+  - type: Lifecycle
+    url: lifecycle/snappr-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/snappr-sandbox.yml
+  - type: Webhooks
+    url: asyncapi/snappr-webhooks.yml
+  - type: DataModel
+    url: data-model/snappr-data-model.yml
+  - type: Conformance
+    url: conformance/snappr-conformance.yml
+- aid: snappr:snappr-editing-job-types-api
+  name: Snappr Editing Job Types API
+  description: Available Snappr editing job types.
+  humanURL: https://docs.snappr.com/
+  baseURL: https://api.snappr.com
+  tags:
+  - Editing Job Types
+  properties:
+  - type: OpenAPI
+    url: openapi/snappr-editing-job-types-api-openapi.yml
+  - type: Documentation
+    url: https://docs.snappr.com/
+  - type: APIReference
+    url: https://docs.snappr.com/
+  - type: Authentication
+    url: authentication/snappr-authentication.yml
+  - type: Conventions
+    url: conventions/snappr-conventions.yml
+  - type: ErrorCatalog
+    url: errors/snappr-error-codes.yml
+  - type: Lifecycle
+    url: lifecycle/snappr-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/snappr-sandbox.yml
+  - type: Webhooks
+    url: asyncapi/snappr-webhooks.yml
+  - type: DataModel
+    url: data-model/snappr-data-model.yml
+  - type: Conformance
+    url: conformance/snappr-conformance.yml
+- aid: snappr:snappr-editing-jobs-api
+  name: Snappr Editing Jobs API
+  description: Create and retrieve photo editing jobs (beta).
+  humanURL: https://docs.snappr.com/
+  baseURL: https://api.snappr.com
+  tags:
+  - Editing Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/snappr-editing-jobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.snappr.com/
+  - type: APIReference
+    url: https://docs.snappr.com/
+  - type: Authentication
+    url: authentication/snappr-authentication.yml
+  - type: Conventions
+    url: conventions/snappr-conventions.yml
+  - type: ErrorCatalog
+    url: errors/snappr-error-codes.yml
+  - type: Lifecycle
+    url: lifecycle/snappr-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/snappr-sandbox.yml
+  - type: Webhooks
+    url: asyncapi/snappr-webhooks.yml
+  - type: DataModel
+    url: data-model/snappr-data-model.yml
+  - type: Conformance
+    url: conformance/snappr-conformance.yml
+- aid: snappr:snappr-images-api
+  name: Snappr Images API
+  description: Retrieve images for bookings and editing jobs.
+  humanURL: https://docs.snappr.com/
+  baseURL: https://api.snappr.com
+  tags:
+  - Images
+  properties:
+  - type: OpenAPI
+    url: openapi/snappr-images-api-openapi.yml
+  - type: Documentation
+    url: https://docs.snappr.com/
+  - type: APIReference
+    url: https://docs.snappr.com/
+  - type: Authentication
+    url: authentication/snappr-authentication.yml
+  - type: Conventions
+    url: conventions/snappr-conventions.yml
+  - type: ErrorCatalog
+    url: errors/snappr-error-codes.yml
+  - type: Lifecycle
+    url: lifecycle/snappr-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/snappr-sandbox.yml
+  - type: Webhooks
+    url: asyncapi/snappr-webhooks.yml
+  - type: DataModel
+    url: data-model/snappr-data-model.yml
+  - type: Conformance
+    url: conformance/snappr-conformance.yml
+- aid: snappr:snappr-presets-api
+  name: Snappr Presets API
+  description: Editing presets defined in the Photography Portal.
+  humanURL: https://docs.snappr.com/
+  baseURL: https://api.snappr.com
+  tags:
+  - Presets
+  properties:
+  - type: OpenAPI
+    url: openapi/snappr-presets-api-openapi.yml
+  - type: Documentation
+    url: https://docs.snappr.com/
+  - type: APIReference
+    url: https://docs.snappr.com/
+  - type: Authentication
+    url: authentication/snappr-authentication.yml
+  - type: Conventions
+    url: conventions/snappr-conventions.yml
+  - type: ErrorCatalog
+    url: errors/snappr-error-codes.yml
+  - type: Lifecycle
+    url: lifecycle/snappr-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/snappr-sandbox.yml
+  - type: Webhooks
+    url: asyncapi/snappr-webhooks.yml
+  - type: DataModel
+    url: data-model/snappr-data-model.yml
+  - type: Conformance
+    url: conformance/snappr-conformance.yml
+- aid: snappr:snappr-shoot-types-api
+  name: Snappr Shoot Types API
+  description: Available Snappr shoot types.
+  humanURL: https://docs.snappr.com/
+  baseURL: https://api.snappr.com
+  tags:
+  - Shoot Types
+  properties:
+  - type: OpenAPI
+    url: openapi/snappr-shoot-types-api-openapi.yml
+  - type: Documentation
+    url: https://docs.snappr.com/
+  - type: APIReference
+    url: https://docs.snappr.com/
+  - type: Authentication
+    url: authentication/snappr-authentication.yml
+  - type: Conventions
+    url: conventions/snappr-conventions.yml
+  - type: ErrorCatalog
+    url: errors/snappr-error-codes.yml
+  - type: Lifecycle
+    url: lifecycle/snappr-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/snappr-sandbox.yml
+  - type: Webhooks
+    url: asyncapi/snappr-webhooks.yml
+  - type: DataModel
+    url: data-model/snappr-data-model.yml
+  - type: Conformance
+    url: conformance/snappr-conformance.yml
+- aid: snappr:snappr-videos-api
+  name: Snappr Videos API
+  description: Retrieve videos for bookings.
+  humanURL: https://docs.snappr.com/
+  baseURL: https://api.snappr.com
+  tags:
+  - Videos
+  properties:
+  - type: OpenAPI
+    url: openapi/snappr-videos-api-openapi.yml
+  - type: Documentation
+    url: https://docs.snappr.com/
+  - type: APIReference
+    url: https://docs.snappr.com/
+  - type: Authentication
+    url: authentication/snappr-authentication.yml
+  - type: Conventions
+    url: conventions/snappr-conventions.yml
+  - type: ErrorCatalog
+    url: errors/snappr-error-codes.yml
+  - type: Lifecycle
+    url: lifecycle/snappr-lifecycle.yml
+  - type: Sandbox
+    url: sandbox/snappr-sandbox.yml
+  - type: Webhooks
+    url: asyncapi/snappr-webhooks.yml
+  - type: DataModel
+    url: data-model/snappr-data-model.yml
+  - type: Conformance
+    url: conformance/snappr-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: AgenticAccess
+  url: agentic-access/snappr-agentic-access.yml
+- type: DomainSecurity
+  url: security/snappr-domain-security.yml
 - type: Website
   url: https://snappr.com
+- type: DeveloperPortal
+  url: https://docs.snappr.com/
+- type: Documentation
+  url: https://docs.snappr.com/
+- type: APIReference
+  url: https://docs.snappr.com/
+- type: GettingStarted
+  url: https://docs.snappr.com/#introduction
+- type: Authentication
+  url: authentication/snappr-authentication.yml
+- type: Sandbox
+  url: sandbox/snappr-sandbox.yml
+- type: StatusPage
+  url: https://snappr.statuspage.io
+- type: Webhooks
+  url: asyncapi/snappr-webhooks.yml
+- type: Conventions
+  url: conventions/snappr-conventions.yml
+- type: MCPServer
+  url: mcp/snappr-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/snappr-llms.txt
+- type: GitHubOrganization
+  url: https://github.com/snappr
+- type: Support
+  url: https://www.snappr.com/contact
+- type: Blog
+  url: https://www.snappr.com/blog
+- type: Pricing
+  url: https://www.snappr.com/pricing
+- type: SignUp
+  url: https://www.snappr.com/enterprise
+- type: Login
+  url: https://app.snappr.com/login
+- type: TermsOfService
+  url: https://www.snappr.com/terms
+- type: PrivacyPolicy
+  url: https://www.snappr.com/privacy
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 18
+  pass: local-v1

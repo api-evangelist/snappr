@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: generated
+source: openapi/snappr-openapi.yml
+skills:
+  - file: snappr-book-a-photoshoot.md
+    name: Book a Snappr photoshoot
+    api: openapi/snappr-openapi.yml
+    operations: [getCoverage, getAvailability, createBooking, getBooking]
+  - file: snappr-retrieve-shoot-assets.md
+    name: Retrieve photoshoot images and videos
+    api: openapi/snappr-openapi.yml
+    operations: [listBookings, listBookingImages, listBookingVideos]
+  - file: snappr-run-an-editing-job.md
+    name: Run a Snappr editing job
+    api: openapi/snappr-openapi.yml
+    operations: [listPresets, createEditingJob, getEditingJob, listEditingJobImages]

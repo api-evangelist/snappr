@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.snappr.com/
+docs: https://docs.snappr.com/
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  api_key_in: [header]
+  notes: >-
+    Snappr uses API keys presented as a bearer token in the Authorization
+    header. Each user has a single unique active API key, managed and
+    regenerated from the Photography Portal GUI. Regenerating deactivates the
+    previous key; deleting a user deactivates their key.
+schemes:
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    in: header
+    header: Authorization
+    format: 'Authorization: Bearer <api_key>'
+    description: >-
+      API key as a bearer token. The API is available only to Snappr for
+      Enterprise customers.
+    sources: [openapi/snappr-openapi.yml, https://docs.snappr.com/]

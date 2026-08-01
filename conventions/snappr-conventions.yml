@@ -1,0 +1,51 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.snappr.com/
+docs: https://docs.snappr.com/
+authentication:
+  style: bearer-api-key
+  header: 'Authorization: Bearer <api_key>'
+  ref: authentication/snappr-authentication.yml
+versioning:
+  style: header
+  header: accept-version
+  current: 1.0.0
+  ref: lifecycle/snappr-lifecycle.yml
+pagination:
+  style: offset
+  params: [limit, offset]
+  response_fields: [results, count, limit, offset, total]
+  defaults:
+    bookings: { limit: 100, max: 100 }
+    editing_jobs: { limit: 100, max: 100 }
+    presets: { limit: 1000, max: 10000 }
+    images: { limit: 1000, max: 10000 }
+    videos: { limit: 1000, max: 10000 }
+  notes: >-
+    List endpoints return a results[] array plus count, limit, offset and total.
+    Status-based filtering is not yet supported (planned by Snappr).
+idempotency:
+  supported: false
+  notes: >-
+    Snappr documents no idempotency-key header. The docs advise checking
+    availability before creating a booking to avoid duplicate/failed creates,
+    but there is no documented idempotency contract.
+rate_limiting:
+  signaling: response-header
+  header: X-RateLimit-Remaining
+  error: { status: 429, name: RateLimit }
+  notes: Applications should respect the X-RateLimit-Remaining header on responses.
+error_envelope:
+  format: named-error
+  fields: [name, message, problems]
+  ref: errors/snappr-error-codes.yml
+environments:
+  production: https://api.snappr.com
+  sandbox: https://sandbox.snappr.com
+  ref: sandbox/snappr-sandbox.yml
+identifiers:
+  style: uuid
+  fields: [uid, creator_id, preset_id, booking_uid, editing_job_uid]
+webhooks:
+  supported: true
+  ref: asyncapi/snappr-webhooks.yml

@@ -1,0 +1,61 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/snappr-openapi.yml
+entities:
+  - name: Booking
+    id: uid
+    description: A commissioned photoshoot.
+    fields: [uid, title, status, credits, latitude, longitude, shoottype, start_at, duration, customer_email, creator_id, internal_id, scheduling_url, tags]
+  - name: EditingJob
+    id: uid
+    description: A photo editing job (automated or human-augmented).
+    fields: [uid, title, status, credits, type, preset_id, uploader_email, internal_id]
+  - name: Preset
+    id: uid
+    description: An editing preset defined in the Photography Portal.
+    fields: [uid, name, description]
+  - name: Image
+    id: uid
+    description: An image belonging to a booking or editing job.
+    fields: [uid, file_name, url_original, url_thumb]
+  - name: EditingJobImage
+    id: uid
+    description: An editing-job image with source and final variants.
+    fields: [uid, source, final]
+  - name: Video
+    id: uid
+    description: A video belonging to a booking.
+    fields: [uid, file_name, url_original]
+  - name: ShootType
+    id: name
+    description: A category of photoshoot (e.g. event, food, real-estate).
+    fields: [name, display_name]
+  - name: EditingJobType
+    id: name
+    description: A category of editing job (e.g. food, real-estate).
+    fields: [name, display_name]
+relationships:
+  - from: Booking
+    to: ShootType
+    kind: belongs_to
+    via: shoottype
+  - from: Booking
+    to: Image
+    kind: has_many
+    via: booking_uid
+  - from: Booking
+    to: Video
+    kind: has_many
+    via: booking_uid
+  - from: EditingJob
+    to: EditingJobType
+    kind: belongs_to
+    via: type
+  - from: EditingJob
+    to: Preset
+    kind: belongs_to
+    via: preset_id
+  - from: EditingJob
+    to: EditingJobImage
+    kind: has_many
+    via: editing_job_uid

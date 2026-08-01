@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.snappr.com/#custom-webhooks
+type: Webhooks
+transport: http-post
+configuration:
+  url: https://app.snappr.com/enterprise/api/webhook
+  how: >-
+    Set a custom webhook URL in the Snappr Photography Portal GUI (API link in
+    the top-right menu, Custom Webhook section). When set, Snappr POSTs to that
+    URL every time a booking is created or updated.
+events:
+  - name: booking.created
+    trigger: A booking is created.
+    method: POST
+    payload_type_field: 'type'
+    payload_type_value: create
+    body: booking
+  - name: booking.updated
+    trigger: A booking is updated (status changes, creator assignment, etc.).
+    method: POST
+    payload_type_field: 'type'
+    payload_type_value: update
+    body: booking
+payload:
+  description: >-
+    JSON POST body with a top-level "type" (e.g. update) and a "booking" object
+    carrying the full booking record (uid, status, creator_id, credits, customer
+    fields, latitude/longitude, shoottype, start_at, timestamps, portal_slug).
+  reference: openapi/snappr-openapi.yml#/components/schemas/Booking
+notes: >-
+  Snappr publishes no AsyncAPI document; this captures the documented webhook
+  surface (Custom Webhooks) faithfully. No signing/verification mechanism is
+  documented.

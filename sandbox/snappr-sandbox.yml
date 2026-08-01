@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.snappr.com/#environments
+environments:
+  production:
+    base_url: https://api.snappr.com
+  sandbox:
+    base_url: https://sandbox.snappr.com
+    description: >-
+      Testing environment. Substitute the base URL for https://sandbox.snappr.com.
+      Sandbox endpoints return dummy data, not data from your account. For
+      sandbox write actions (e.g. create endpoints), changes are NOT reflected in
+      subsequent sandbox requests.
+separation:
+  mechanism: base-url
+  notes: Same API key/auth; the environment is selected by base URL, not a key prefix.
+test_values:
+  notes: >-
+    Snappr does not publish fixed magic test identifiers; the sandbox returns
+    generic dummy data for read endpoints and does not persist writes. No test
+    cards or fixture tokens are documented (the API is credit-based via the
+    Enterprise account, not direct card entry).
