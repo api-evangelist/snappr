@@ -1,0 +1,81 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Snappr Availability API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Availability",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Availability",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.snappr.com/availability",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "latitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "longitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "address",
+                "value": "",
+                "type": "query",
+                "description": "Address of the shoot location. Must be a Google Maps valid address."
+              },
+              {
+                "name": "shoottype",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "duration",
+                "value": "",
+                "type": "query",
+                "description": "Length of the shoot in minutes."
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date for which to check time availability (ISO date)."
+              },
+              {
+                "name": "creator_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns available shoot start times for a combination of location, date, shoot type and duration. Returned times are always in UTC."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

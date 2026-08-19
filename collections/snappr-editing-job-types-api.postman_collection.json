@@ -1,0 +1,180 @@
+{
+  "item": [
+    {
+      "id": "1066052b-fee9-4162-837c-07f8c0e87f55",
+      "name": "Editing Job Types",
+      "description": {
+        "content": "Available Snappr editing job types.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4c300b40-65a0-4ba6-bc2e-69ae26009f50",
+          "name": "Get All Editing Job Types",
+          "request": {
+            "name": "Get All Editing Job Types",
+            "description": {
+              "content": "Returns all available Snappr editing job types.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "editing-job-types"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Requested API version (e.g. \"1.0.0\").",
+                "key": "accept-version",
+                "value": "1.0.0"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e816232b-3f4b-4fd2-9782-d359a5470977",
+              "name": "A paginated list of editing job types.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-job-types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 2207,\n  \"limit\": 1576,\n  \"offset\": 2041,\n  \"total\": 4223,\n  \"results\": [\n    {\n      \"name\": \"string\",\n      \"display_name\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"display_name\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7eae4674-e62d-4e44-af68-5462fab754ab",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-job-types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.snappr.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "0e8631ea-2ee9-44a1-80b2-29a5e532d520",
+    "name": "Snappr Availability Editing Job Types API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Snappr API is a universal API for commissioning and handling visual content: on-demand photography with Snappr network photographers, automated and human-augmented photo editing services, and retrieval of the resulting images and videos. The API is available only to Snappr for Enterprise customers. Faithfully generated by the API Evangelist enrichment pipeline from the public documentation at https://docs.snappr.com/ (no fabricated operations or fields).\n\nContact Support:\n Name: Snappr for Enterprise",
+      "type": "text/plain"
+    }
+  }
+}

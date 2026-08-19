@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Snappr Availability Editing Job Types API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Editing Job Types",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get All Editing Job Types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.snappr.com/editing-job-types",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Returns all available Snappr editing job types."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

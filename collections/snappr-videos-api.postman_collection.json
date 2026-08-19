@@ -1,0 +1,309 @@
+{
+  "item": [
+    {
+      "id": "e33f3c42-1ba5-4e36-95db-012c585aaba5",
+      "name": "Videos",
+      "description": {
+        "content": "Retrieve videos for bookings.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "44d17919-98da-43a2-99b4-19cccbcc1e3c",
+          "name": "Get All Videos For a Booking",
+          "request": {
+            "name": "Get All Videos For a Booking",
+            "description": {
+              "content": "Retrieves all the videos of a specific booking.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "bookings",
+                ":booking_uid",
+                "videos"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>",
+                  "description": "Maximum number of results to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "Offset used for pagination. Defaults to 0."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "booking_uid",
+                  "description": "(Required) The identifier of the booking."
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Requested API version (e.g. \"1.0.0\").",
+                "key": "accept-version",
+                "value": "1.0.0"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d4ffefa3-a01b-4a95-bdc5-80b033b15c3a",
+              "name": "A paginated list of videos.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings",
+                    ":booking_uid",
+                    "videos"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "booking_uid",
+                      "description": "(Required) The identifier of the booking."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 8296,\n  \"limit\": 8858,\n  \"offset\": 9215,\n  \"total\": 3243,\n  \"results\": [\n    {\n      \"uid\": \"string\",\n      \"file_name\": \"string\",\n      \"url_original\": \"https://mrDESNEeHsqrWfPHmexPaXxPGy.xbfmPRPFharFC+WVZS1qNdC85u291rS-mzzaxiRBcN2qgoNPINo4BOGPG5xJD,OgBd0kB5NRr\"\n    },\n    {\n      \"uid\": \"string\",\n      \"file_name\": \"string\",\n      \"url_original\": \"https://sNdMwi.hmwrdLybRF9FlZVezyomX,jorXbA8aYStgqDOC9o8M-gjO.xbcq1RX\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a05444c6-240e-4479-923c-4e2922c2ea14",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings",
+                    ":booking_uid",
+                    "videos"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "booking_uid",
+                      "description": "(Required) The identifier of the booking."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "49c2ab61-5ef3-4dd2-b70f-61f1c9e00e98",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings",
+                    ":booking_uid",
+                    "videos"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "booking_uid",
+                      "description": "(Required) The identifier of the booking."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.snappr.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d5d2e6fa-57b4-453f-872b-5edbdebbadca",
+    "name": "Snappr Availability Videos API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Snappr API is a universal API for commissioning and handling visual content: on-demand photography with Snappr network photographers, automated and human-augmented photo editing services, and retrieval of the resulting images and videos. The API is available only to Snappr for Enterprise customers. Faithfully generated by the API Evangelist enrichment pipeline from the public documentation at https://docs.snappr.com/ (no fabricated operations or fields).\n\nContact Support:\n Name: Snappr for Enterprise",
+      "type": "text/plain"
+    }
+  }
+}

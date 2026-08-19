@@ -1,0 +1,717 @@
+{
+  "item": [
+    {
+      "id": "a2af2d3f-e951-418f-94e1-e58b1928c14c",
+      "name": "Bookings",
+      "description": {
+        "content": "Create and retrieve photoshoot bookings.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "45ef5df5-787c-48af-ade1-91e1c2eea1e2",
+          "name": "Get All Bookings",
+          "request": {
+            "name": "Get All Bookings",
+            "description": {
+              "content": "Retrieves all bookings, paginated with limit and offset.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "bookings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>",
+                  "description": "Maximum number of results to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "Offset used for pagination. Defaults to 0."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Requested API version (e.g. \"1.0.0\").",
+                "key": "accept-version",
+                "value": "1.0.0"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fdc88349-66e4-4512-ab0c-d25cd914b896",
+              "name": "A paginated list of bookings.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 6882,\n  \"limit\": 897,\n  \"offset\": 3931,\n  \"total\": 230,\n  \"results\": [\n    {\n      \"uid\": \"string\",\n      \"title\": \"string\",\n      \"status\": \"string\",\n      \"credits\": 462,\n      \"latitude\": 6015.48726347955,\n      \"longitude\": 9270.182732611682,\n      \"shoottype\": \"string\",\n      \"start_at\": \"1974-03-13T11:47:54.992Z\",\n      \"duration\": 6373,\n      \"location_notes\": \"string\",\n      \"style_notes\": \"string\",\n      \"customer_firstname\": \"string\",\n      \"customer_surname\": \"string\",\n      \"customer_email\": \"p2Ka@PxHxaqhBteBuxRDAXGbmnfUkemfcGn.qxq\",\n      \"customer_mobilephone\": \"string\",\n      \"customer_company\": \"string\",\n      \"internal_id\": \"string\",\n      \"creator_name\": \"string\",\n      \"creator_id\": \"string\",\n      \"creator_profile_image_url\": \"http://ILXABopHjnIYCcasWlJLNutXbX.faqlh55JMLqC6ucuB1atqcuMcD\",\n      \"scheduling_url\": \"https://xLFdIkxRZLoZxdyEkKUPSRbFor.xieJRwPtPbcQKBSn6q2qXoheruRWwWTv\",\n      \"created_at\": \"2006-04-21T16:07:15.564Z\",\n      \"updated_at\": \"1980-02-25T01:54:19.488Z\",\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"uid\": \"string\",\n      \"title\": \"string\",\n      \"status\": \"string\",\n      \"credits\": 3698,\n      \"latitude\": 311.88726938379705,\n      \"longitude\": 9534.308721739171,\n      \"shoottype\": \"string\",\n      \"start_at\": \"1976-11-04T11:02:12.846Z\",\n      \"duration\": 2725,\n      \"location_notes\": \"string\",\n      \"style_notes\": \"string\",\n      \"customer_firstname\": \"string\",\n      \"customer_surname\": \"string\",\n      \"customer_email\": \"lk-7@RQwxnBGbJOhSKCkDcrlHupEcUXYUqWP.jqi\",\n      \"customer_mobilephone\": \"string\",\n      \"customer_company\": \"string\",\n      \"internal_id\": \"string\",\n      \"creator_name\": \"string\",\n      \"creator_id\": \"string\",\n      \"creator_profile_image_url\": \"https://qlNEpCkUbUD.mfpMs1HLbIRzVzDFIXIFQ-hA2o9jMSHFsle68ZXApa1+1HiG-tOuOOJVssH39Wy+H59n\",\n      \"scheduling_url\": \"https://jB.hcdV4QwOiiW2uMTZPbcq8-SQSSZPVQaJ\",\n      \"created_at\": \"2003-08-19T03:12:44.049Z\",\n      \"updated_at\": \"1994-03-25T15:00:17.748Z\",\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1627688a-9b57-42b3-9ab5-2c30d67599a1",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bad43014-50a4-454c-8d5a-20b37addb747",
+          "name": "Create New Booking",
+          "request": {
+            "name": "Create New Booking",
+            "description": {
+              "content": "Creates a new photoshoot booking. Provide all shoot details including start_at, or set start_at to null to have Snappr collect the start time from the end-customer (the response then includes a scheduling_url). Always check availability before creating a booking with start_at defined, or a 400 NoCoverage/NotAvailable error may be returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "bookings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Requested API version (e.g. \"1.0.0\").",
+                "key": "accept-version",
+                "value": "1.0.0"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shoottype\": \"<string>\",\n  \"start_at\": \"<string,null-date-time>\",\n  \"duration\": \"<integer>\",\n  \"customer_firstname\": \"<string>\",\n  \"customer_email\": \"<email>\",\n  \"customer_mobilephone\": \"<string>\",\n  \"title\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"address\": \"<string>\",\n  \"location_notes\": \"<string>\",\n  \"style_notes\": \"<string>\",\n  \"customer_surname\": \"<string>\",\n  \"customer_company\": \"<string>\",\n  \"internal_id\": \"<string>\",\n  \"creator_id\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f65e5a45-e7b8-4787-bb04-359996ba8219",
+              "name": "The created booking.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"shoottype\": \"<string>\",\n  \"start_at\": \"<string,null-date-time>\",\n  \"duration\": \"<integer>\",\n  \"customer_firstname\": \"<string>\",\n  \"customer_email\": \"<email>\",\n  \"customer_mobilephone\": \"<string>\",\n  \"title\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"address\": \"<string>\",\n  \"location_notes\": \"<string>\",\n  \"style_notes\": \"<string>\",\n  \"customer_surname\": \"<string>\",\n  \"customer_company\": \"<string>\",\n  \"internal_id\": \"<string>\",\n  \"creator_id\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"uid\": \"string\",\n  \"title\": \"string\",\n  \"status\": \"string\",\n  \"credits\": 9081,\n  \"latitude\": 7256.895199361624,\n  \"longitude\": 4141.320730867969,\n  \"shoottype\": \"string\",\n  \"start_at\": \"1950-03-07T17:57:36.980Z\",\n  \"duration\": 6889,\n  \"location_notes\": \"string\",\n  \"style_notes\": \"string\",\n  \"customer_firstname\": \"string\",\n  \"customer_surname\": \"string\",\n  \"customer_email\": \"1QOj-B6kYn@fDNmrg.uth\",\n  \"customer_mobilephone\": \"string\",\n  \"customer_company\": \"string\",\n  \"internal_id\": \"string\",\n  \"creator_name\": \"string\",\n  \"creator_id\": \"string\",\n  \"creator_profile_image_url\": \"https://fMpmrPseZQYvSNVfGlU.ctaM6u4BI+0F6HlnJAyRBBG0dlLEwOXytHMjKQEOrjIt-g,++ybM-mFsKmF3X92\",\n  \"scheduling_url\": \"https://HEvdQUwwEPNOprReThXxjimKq.gmzjTWftjW43xFvJpzay+t00wGfqFx8PHyMm5gBWmkFO\",\n  \"created_at\": \"1953-09-12T07:50:07.065Z\",\n  \"updated_at\": \"1970-06-16T13:31:39.801Z\",\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4f896c70-453d-485b-a54c-c6b233ab5662",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"shoottype\": \"<string>\",\n  \"start_at\": \"<string,null-date-time>\",\n  \"duration\": \"<integer>\",\n  \"customer_firstname\": \"<string>\",\n  \"customer_email\": \"<email>\",\n  \"customer_mobilephone\": \"<string>\",\n  \"title\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"address\": \"<string>\",\n  \"location_notes\": \"<string>\",\n  \"style_notes\": \"<string>\",\n  \"customer_surname\": \"<string>\",\n  \"customer_company\": \"<string>\",\n  \"internal_id\": \"<string>\",\n  \"creator_id\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2bd97375-f415-4617-b43d-3fc35ce90c46",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"shoottype\": \"<string>\",\n  \"start_at\": \"<string,null-date-time>\",\n  \"duration\": \"<integer>\",\n  \"customer_firstname\": \"<string>\",\n  \"customer_email\": \"<email>\",\n  \"customer_mobilephone\": \"<string>\",\n  \"title\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"address\": \"<string>\",\n  \"location_notes\": \"<string>\",\n  \"style_notes\": \"<string>\",\n  \"customer_surname\": \"<string>\",\n  \"customer_company\": \"<string>\",\n  \"internal_id\": \"<string>\",\n  \"creator_id\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2709d582-5146-46ae-b908-e33a98742ae1",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"shoottype\": \"<string>\",\n  \"start_at\": \"<string,null-date-time>\",\n  \"duration\": \"<integer>\",\n  \"customer_firstname\": \"<string>\",\n  \"customer_email\": \"<email>\",\n  \"customer_mobilephone\": \"<string>\",\n  \"title\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"address\": \"<string>\",\n  \"location_notes\": \"<string>\",\n  \"style_notes\": \"<string>\",\n  \"customer_surname\": \"<string>\",\n  \"customer_company\": \"<string>\",\n  \"internal_id\": \"<string>\",\n  \"creator_id\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Payment Required",
+              "code": 402,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cdcca479-c6c4-4687-bacc-dbd40529f51e",
+          "name": "Get Single Booking",
+          "request": {
+            "name": "Get Single Booking",
+            "description": {
+              "content": "Retrieves a specific booking by its identifier.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "bookings",
+                ":booking_uid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "booking_uid",
+                  "description": "(Required) The identifier of the booking."
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Requested API version (e.g. \"1.0.0\").",
+                "key": "accept-version",
+                "value": "1.0.0"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "93eb0c13-8c75-4352-8c19-95050f506d3a",
+              "name": "The requested booking.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings",
+                    ":booking_uid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "booking_uid",
+                      "description": "(Required) The identifier of the booking."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"uid\": \"string\",\n  \"title\": \"string\",\n  \"status\": \"string\",\n  \"credits\": 9081,\n  \"latitude\": 7256.895199361624,\n  \"longitude\": 4141.320730867969,\n  \"shoottype\": \"string\",\n  \"start_at\": \"1950-03-07T17:57:36.980Z\",\n  \"duration\": 6889,\n  \"location_notes\": \"string\",\n  \"style_notes\": \"string\",\n  \"customer_firstname\": \"string\",\n  \"customer_surname\": \"string\",\n  \"customer_email\": \"1QOj-B6kYn@fDNmrg.uth\",\n  \"customer_mobilephone\": \"string\",\n  \"customer_company\": \"string\",\n  \"internal_id\": \"string\",\n  \"creator_name\": \"string\",\n  \"creator_id\": \"string\",\n  \"creator_profile_image_url\": \"https://fMpmrPseZQYvSNVfGlU.ctaM6u4BI+0F6HlnJAyRBBG0dlLEwOXytHMjKQEOrjIt-g,++ybM-mFsKmF3X92\",\n  \"scheduling_url\": \"https://HEvdQUwwEPNOprReThXxjimKq.gmzjTWftjW43xFvJpzay+t00wGfqFx8PHyMm5gBWmkFO\",\n  \"created_at\": \"1953-09-12T07:50:07.065Z\",\n  \"updated_at\": \"1970-06-16T13:31:39.801Z\",\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "01b763a5-d9e8-40bf-9645-4c758893b613",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings",
+                    ":booking_uid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "booking_uid",
+                      "description": "(Required) The identifier of the booking."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ec88eb1e-1022-4dac-ba97-7b21fd3888d8",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings",
+                    ":booking_uid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "booking_uid",
+                      "description": "(Required) The identifier of the booking."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.snappr.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "6a0b9436-a6a7-4f51-a938-dd2f8d10d7a2",
+    "name": "Snappr Availability Bookings API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Snappr API is a universal API for commissioning and handling visual content: on-demand photography with Snappr network photographers, automated and human-augmented photo editing services, and retrieval of the resulting images and videos. The API is available only to Snappr for Enterprise customers. Faithfully generated by the API Evangelist enrichment pipeline from the public documentation at https://docs.snappr.com/ (no fabricated operations or fields).\n\nContact Support:\n Name: Snappr for Enterprise",
+      "type": "text/plain"
+    }
+  }
+}

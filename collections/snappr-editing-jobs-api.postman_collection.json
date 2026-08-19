@@ -1,0 +1,717 @@
+{
+  "item": [
+    {
+      "id": "b571fba3-7ac5-4009-885e-6f7dc4057a59",
+      "name": "Editing Jobs",
+      "description": {
+        "content": "Create and retrieve photo editing jobs (beta).",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4709d493-1abb-4981-a754-eb97303554f4",
+          "name": "Get All Editing Jobs",
+          "request": {
+            "name": "Get All Editing Jobs",
+            "description": {
+              "content": "Retrieves all editing jobs, paginated with limit and offset. (Beta.)",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "editing-jobs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>",
+                  "description": "Maximum number of results to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "Offset used for pagination. Defaults to 0."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Requested API version (e.g. \"1.0.0\").",
+                "key": "accept-version",
+                "value": "1.0.0"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "753f29a6-478b-47ff-97a0-fcd8d4bafd50",
+              "name": "A paginated list of editing jobs.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 4772,\n  \"limit\": 7031,\n  \"offset\": 8260,\n  \"total\": 6292,\n  \"results\": [\n    {\n      \"uid\": \"string\",\n      \"title\": \"string\",\n      \"status\": \"string\",\n      \"credits\": 3673,\n      \"type\": \"string\",\n      \"preset_id\": \"string\",\n      \"uploader_firstname\": \"string\",\n      \"uploader_surname\": \"string\",\n      \"uploader_email\": \"BXLuOd9iU8GmoF@ZrRCOcUfBoGzLLRhXqYJnwreFsyONm.tjh\",\n      \"uploader_mobilephone\": \"string\",\n      \"uploader_company\": \"string\",\n      \"internal_id\": \"string\",\n      \"created_at\": \"1950-09-12T15:29:04.756Z\",\n      \"updated_at\": \"1989-02-12T08:01:53.016Z\"\n    },\n    {\n      \"uid\": \"string\",\n      \"title\": \"string\",\n      \"status\": \"string\",\n      \"credits\": 6211,\n      \"type\": \"string\",\n      \"preset_id\": \"string\",\n      \"uploader_firstname\": \"string\",\n      \"uploader_surname\": \"string\",\n      \"uploader_email\": \"pwRgM51oLs@AjPrDPmMGahCQcgCmZQRIyMszW.tz\",\n      \"uploader_mobilephone\": \"string\",\n      \"uploader_company\": \"string\",\n      \"internal_id\": \"string\",\n      \"created_at\": \"1955-12-07T17:57:16.720Z\",\n      \"updated_at\": \"1997-06-23T12:44:22.370Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2a7c82c8-6d37-453a-a811-95aa10343148",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "92f4f618-73a7-42b0-a69b-90c5553f7ddf",
+          "name": "Create New Editing Job",
+          "request": {
+            "name": "Create New Editing Job",
+            "description": {
+              "content": "Creates a new editing job. Provide the source images, or set images to null to have Snappr collect them from a third-party uploader. The Editing Jobs API is in beta; contact your account manager to enable it.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "editing-jobs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Requested API version (e.g. \"1.0.0\").",
+                "key": "accept-version",
+                "value": "1.0.0"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"<string>\",\n  \"preset_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"images\": [\n    {\n      \"url_source\": \"<uri>\",\n      \"file_name\": \"<string>\"\n    },\n    {\n      \"url_source\": \"<uri>\",\n      \"file_name\": \"<string>\"\n    }\n  ],\n  \"uploader_firstname\": \"<string>\",\n  \"uploader_surname\": \"<string>\",\n  \"uploader_email\": \"<email>\",\n  \"uploader_mobilephone\": \"<string>\",\n  \"uploader_company\": \"<string>\",\n  \"internal_id\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "292a2a6e-a520-436e-b4c4-7727ece6ee89",
+              "name": "The created editing job.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"<string>\",\n  \"preset_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"images\": [\n    {\n      \"url_source\": \"<uri>\",\n      \"file_name\": \"<string>\"\n    },\n    {\n      \"url_source\": \"<uri>\",\n      \"file_name\": \"<string>\"\n    }\n  ],\n  \"uploader_firstname\": \"<string>\",\n  \"uploader_surname\": \"<string>\",\n  \"uploader_email\": \"<email>\",\n  \"uploader_mobilephone\": \"<string>\",\n  \"uploader_company\": \"<string>\",\n  \"internal_id\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"uid\": \"string\",\n  \"title\": \"string\",\n  \"status\": \"string\",\n  \"credits\": 4085,\n  \"type\": \"string\",\n  \"preset_id\": \"string\",\n  \"uploader_firstname\": \"string\",\n  \"uploader_surname\": \"string\",\n  \"uploader_email\": \"Sqa@viWLzJJcJgIznYKJBQszNLChJtXX.sh\",\n  \"uploader_mobilephone\": \"string\",\n  \"uploader_company\": \"string\",\n  \"internal_id\": \"string\",\n  \"created_at\": \"1979-12-07T18:08:01.537Z\",\n  \"updated_at\": \"1954-08-19T06:33:28.445Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "21de88c5-0bef-4b32-be63-95b391cec6cf",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"<string>\",\n  \"preset_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"images\": [\n    {\n      \"url_source\": \"<uri>\",\n      \"file_name\": \"<string>\"\n    },\n    {\n      \"url_source\": \"<uri>\",\n      \"file_name\": \"<string>\"\n    }\n  ],\n  \"uploader_firstname\": \"<string>\",\n  \"uploader_surname\": \"<string>\",\n  \"uploader_email\": \"<email>\",\n  \"uploader_mobilephone\": \"<string>\",\n  \"uploader_company\": \"<string>\",\n  \"internal_id\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dedee83f-ca59-4e38-a259-62339f578ad0",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"<string>\",\n  \"preset_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"images\": [\n    {\n      \"url_source\": \"<uri>\",\n      \"file_name\": \"<string>\"\n    },\n    {\n      \"url_source\": \"<uri>\",\n      \"file_name\": \"<string>\"\n    }\n  ],\n  \"uploader_firstname\": \"<string>\",\n  \"uploader_surname\": \"<string>\",\n  \"uploader_email\": \"<email>\",\n  \"uploader_mobilephone\": \"<string>\",\n  \"uploader_company\": \"<string>\",\n  \"internal_id\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "abedec4d-7930-4cf6-9566-4c025a006e27",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"<string>\",\n  \"preset_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"images\": [\n    {\n      \"url_source\": \"<uri>\",\n      \"file_name\": \"<string>\"\n    },\n    {\n      \"url_source\": \"<uri>\",\n      \"file_name\": \"<string>\"\n    }\n  ],\n  \"uploader_firstname\": \"<string>\",\n  \"uploader_surname\": \"<string>\",\n  \"uploader_email\": \"<email>\",\n  \"uploader_mobilephone\": \"<string>\",\n  \"uploader_company\": \"<string>\",\n  \"internal_id\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Payment Required",
+              "code": 402,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8a349a04-4c59-4c89-8479-40020c1ec741",
+          "name": "Get Single Editing Job",
+          "request": {
+            "name": "Get Single Editing Job",
+            "description": {
+              "content": "Retrieves a specific editing job by its identifier.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "editing-jobs",
+                ":editing_job_uid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "editing_job_uid",
+                  "description": "(Required) The identifier of the editing job."
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Requested API version (e.g. \"1.0.0\").",
+                "key": "accept-version",
+                "value": "1.0.0"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bb9ee515-1f49-4484-bc73-77f22d888b28",
+              "name": "The requested editing job.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-jobs",
+                    ":editing_job_uid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "editing_job_uid",
+                      "description": "(Required) The identifier of the editing job."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"uid\": \"string\",\n  \"title\": \"string\",\n  \"status\": \"string\",\n  \"credits\": 4085,\n  \"type\": \"string\",\n  \"preset_id\": \"string\",\n  \"uploader_firstname\": \"string\",\n  \"uploader_surname\": \"string\",\n  \"uploader_email\": \"Sqa@viWLzJJcJgIznYKJBQszNLChJtXX.sh\",\n  \"uploader_mobilephone\": \"string\",\n  \"uploader_company\": \"string\",\n  \"internal_id\": \"string\",\n  \"created_at\": \"1979-12-07T18:08:01.537Z\",\n  \"updated_at\": \"1954-08-19T06:33:28.445Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f560317b-aec6-4890-97b4-ad794f271b5b",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-jobs",
+                    ":editing_job_uid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "editing_job_uid",
+                      "description": "(Required) The identifier of the editing job."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "825ab7a9-47ee-4bd9-af64-17efa101347c",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-jobs",
+                    ":editing_job_uid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "editing_job_uid",
+                      "description": "(Required) The identifier of the editing job."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.snappr.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "289cadad-a959-4353-b5b6-3cfe1969c261",
+    "name": "Snappr Availability Editing Jobs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Snappr API is a universal API for commissioning and handling visual content: on-demand photography with Snappr network photographers, automated and human-augmented photo editing services, and retrieval of the resulting images and videos. The API is available only to Snappr for Enterprise customers. Faithfully generated by the API Evangelist enrichment pipeline from the public documentation at https://docs.snappr.com/ (no fabricated operations or fields).\n\nContact Support:\n Name: Snappr for Enterprise",
+      "type": "text/plain"
+    }
+  }
+}

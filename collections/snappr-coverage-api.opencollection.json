@@ -1,0 +1,73 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Snappr Availability Coverage API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Coverage",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Coverage",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.snappr.com/coverage",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "latitude",
+                "value": "",
+                "type": "query",
+                "description": "Latitude of the shoot location."
+              },
+              {
+                "name": "longitude",
+                "value": "",
+                "type": "query",
+                "description": "Longitude of the shoot location."
+              },
+              {
+                "name": "address",
+                "value": "",
+                "type": "query",
+                "description": "Address of the shoot location. Must be a Google Maps valid address."
+              },
+              {
+                "name": "shoottype",
+                "value": "",
+                "type": "query",
+                "description": "Name of the shoot type (e.g. \"event\")."
+              },
+              {
+                "name": "creator_id",
+                "value": "",
+                "type": "query",
+                "description": "Identifier of a creator, to check coverage for a specific creator."
+              }
+            ]
+          },
+          "docs": "Returns Snappr coverage status (boolean) for a given location and shoot type. Coverage status is independent of specific dates or times. Provide either an address, or latitude and longitude."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

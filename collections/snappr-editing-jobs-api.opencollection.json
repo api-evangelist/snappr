@@ -1,0 +1,101 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Snappr Availability Editing Jobs API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Editing Jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get All Editing Jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.snappr.com/editing-jobs",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of results to return."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Offset used for pagination. Defaults to 0."
+              }
+            ]
+          },
+          "docs": "Retrieves all editing jobs, paginated with limit and offset. (Beta.)"
+        },
+        {
+          "info": {
+            "name": "Create New Editing Job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.snappr.com/editing-jobs",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new editing job. Provide the source images, or set images to null to have Snappr collect them from a third-party uploader. The Editing Jobs API is in beta; contact your account manager to enable it."
+        },
+        {
+          "info": {
+            "name": "Get Single Editing Job",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.snappr.com/editing-jobs/:editing_job_uid",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "editing_job_uid",
+                "value": "",
+                "type": "path",
+                "description": "The identifier of the editing job."
+              }
+            ]
+          },
+          "docs": "Retrieves a specific editing job by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,101 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Snappr Availability Bookings API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Bookings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get All Bookings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.snappr.com/bookings",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of results to return."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Offset used for pagination. Defaults to 0."
+              }
+            ]
+          },
+          "docs": "Retrieves all bookings, paginated with limit and offset."
+        },
+        {
+          "info": {
+            "name": "Create New Booking",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.snappr.com/bookings",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new photoshoot booking. Provide all shoot details including start_at, or set start_at to null to have Snappr collect the start time from the end-customer (the response then includes a scheduling_url). Always check availability before creating a booking with start_at defined, or a 400 NoCoverage/NotAvailable error may be returned."
+        },
+        {
+          "info": {
+            "name": "Get Single Booking",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.snappr.com/bookings/:booking_uid",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "booking_uid",
+                "value": "",
+                "type": "path",
+                "description": "The identifier of the booking."
+              }
+            ]
+          },
+          "docs": "Retrieves a specific booking by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

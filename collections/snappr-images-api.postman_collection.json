@@ -1,0 +1,577 @@
+{
+  "item": [
+    {
+      "id": "03cdbdbb-364f-4e94-8b30-7690be5b5939",
+      "name": "Images",
+      "description": {
+        "content": "Retrieve images for bookings and editing jobs.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6937939f-71fe-4003-8c8d-a09b4c1f0e68",
+          "name": "Get All Images For a Booking",
+          "request": {
+            "name": "Get All Images For a Booking",
+            "description": {
+              "content": "Retrieves all the images of a specific booking.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "bookings",
+                ":booking_uid",
+                "images"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>",
+                  "description": "Maximum number of results to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "Offset used for pagination. Defaults to 0."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "booking_uid",
+                  "description": "(Required) The identifier of the booking."
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Requested API version (e.g. \"1.0.0\").",
+                "key": "accept-version",
+                "value": "1.0.0"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "129ca95a-155c-43a0-864d-b5c8a618de3c",
+              "name": "A paginated list of images.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings",
+                    ":booking_uid",
+                    "images"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "booking_uid",
+                      "description": "(Required) The identifier of the booking."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 3014,\n  \"limit\": 9263,\n  \"offset\": 143,\n  \"total\": 7729,\n  \"results\": [\n    {\n      \"uid\": \"string\",\n      \"file_name\": \"string\",\n      \"url_original\": \"http://lMScVpcdoTXAbWaUqYAWoAaDhiRIo.ztWzS03nizhVZs,Ao-CPqTxMeqfAat8tIEea1F\",\n      \"url_thumb\": \"https://dXKVIJAbupaGF.irsxe2.jHfrFCwXRrVjcZ.njlknH9PnyVt.vnej,Sg+8BzUY\"\n    },\n    {\n      \"uid\": \"string\",\n      \"file_name\": \"string\",\n      \"url_original\": \"http://LudyIhXNfSJ.phTgeNz\",\n      \"url_thumb\": \"http://SxuIH.nlOMRifZgSTD1u16rrAKzSGeIAGdaB3akckb1OLEdtolBEs5\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "74f749ba-59e5-4179-b136-ee07fcc07ba3",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings",
+                    ":booking_uid",
+                    "images"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "booking_uid",
+                      "description": "(Required) The identifier of the booking."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "84504d42-b87d-463f-a364-e68b4cf167eb",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings",
+                    ":booking_uid",
+                    "images"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "booking_uid",
+                      "description": "(Required) The identifier of the booking."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "25d034cc-12e0-4930-9d2b-60be3e3be7b7",
+          "name": "Get All Images For an Editing Job",
+          "request": {
+            "name": "Get All Images For an Editing Job",
+            "description": {
+              "content": "Retrieves all the images of a specific editing job (source and final).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "editing-jobs",
+                ":editing_job_uid",
+                "images"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>",
+                  "description": "Maximum number of results to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "Offset used for pagination. Defaults to 0."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "editing_job_uid",
+                  "description": "(Required) The identifier of the editing job."
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Requested API version (e.g. \"1.0.0\").",
+                "key": "accept-version",
+                "value": "1.0.0"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "be508e96-c6fd-4e13-8c13-3b5239fa0fb9",
+              "name": "A paginated list of editing-job images.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-jobs",
+                    ":editing_job_uid",
+                    "images"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "editing_job_uid",
+                      "description": "(Required) The identifier of the editing job."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 238,\n  \"limit\": 3843,\n  \"offset\": 2316,\n  \"total\": 7488,\n  \"results\": [\n    {\n      \"uid\": \"string\",\n      \"source\": {\n        \"uid\": \"string\",\n        \"file_name\": \"string\",\n        \"url_original\": \"https://oIbOHKHrVYQTLnDMcqYcO.gdqp9kAwPnAI6HkcFE+XSXut-+XVUImm,9FiK7cm\",\n        \"url_thumb\": \"http://k.qfjuJPFg3kS,BvTRch9j2JIephrhLTR9VYrwWG\"\n      },\n      \"final\": {\n        \"uid\": \"string\",\n        \"file_name\": \"string\",\n        \"url_original\": \"https://zjwGsbFDTaMRZSjHJshBLvjX.gbIT-C5MgxgvGhKhaCsKaJQPlecd79arVh2UTtcs5XVm\",\n        \"url_thumb\": \"http://hcyZXFheJjoMfO.nlzuR6vKBXwEgWqCLXufKgjPi+XNLgj3PXhW.li5btE0kPNQnjZxwP5rEyV49qkQIxn-C+.NPrBAQFtlXKIA\"\n      }\n    },\n    {\n      \"uid\": \"string\",\n      \"source\": {\n        \"uid\": \"string\",\n        \"file_name\": \"string\",\n        \"url_original\": \"http://IZZKpWJyvLuhdQaNmLmGGSxheUfKgDOg.myYS0+Dz.4FuRORp\",\n        \"url_thumb\": \"http://gpMYTTbhltIVicx.nlbM8ny.5dp0HJfUq,s5VGmqlCVoFSLf0y20+\"\n      },\n      \"final\": {\n        \"uid\": \"string\",\n        \"file_name\": \"string\",\n        \"url_original\": \"http://VjbKMNAOkZYaJgJhhyUlerLbPsir.tqcbVgeFhfH-8vQ4zYsXxt75mdFQunDnDG,cj\",\n        \"url_thumb\": \"http://TQBfVkalRxqHWTFmHacVaCEyqPW.qgcCMhLOc9PShAAMGOrF-kjo-OUdsp3eX5XDVUFOc-AkwuH\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "26a5f301-2cad-42ca-bc8d-6ef20d774a72",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-jobs",
+                    ":editing_job_uid",
+                    "images"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "editing_job_uid",
+                      "description": "(Required) The identifier of the editing job."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "41e1cf52-48cc-4b74-83ab-18c002418640",
+              "name": "Error response. See the error catalog for named error codes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editing-jobs",
+                    ":editing_job_uid",
+                    "images"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "editing_job_uid",
+                      "description": "(Required) The identifier of the editing job."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Requested API version (e.g. \"1.0.0\").",
+                    "key": "accept-version",
+                    "value": "1.0.0"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.snappr.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "910a890c-5a75-40b6-acdc-83819181f0a6",
+    "name": "Snappr Availability Images API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Snappr API is a universal API for commissioning and handling visual content: on-demand photography with Snappr network photographers, automated and human-augmented photo editing services, and retrieval of the resulting images and videos. The API is available only to Snappr for Enterprise customers. Faithfully generated by the API Evangelist enrichment pipeline from the public documentation at https://docs.snappr.com/ (no fabricated operations or fields).\n\nContact Support:\n Name: Snappr for Enterprise",
+      "type": "text/plain"
+    }
+  }
+}

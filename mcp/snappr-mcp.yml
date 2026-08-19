@@ -2,52 +2,57 @@ generated: '2026-07-21'
 method: derived
 status: candidate
 source: openapi/snappr-openapi.yml
-note: >-
-  No official hosted/remote Snappr MCP server was found. This is a candidate
-  tool list derived one-to-one from the documented OpenAPI operations.
+note: No official hosted/remote Snappr MCP server was found. This is a candidate tool list derived one-to-one
+  from the documented OpenAPI operations.
 server:
   name: snappr
   transport: http
 tools:
-  - name: get_coverage
-    description: Check Snappr coverage for a location and shoot type.
-    source_operation: openapi/snappr-openapi.yml#getCoverage
-  - name: get_availability
-    description: Get available shoot start times for a location, date, shoot type and duration.
-    source_operation: openapi/snappr-openapi.yml#getAvailability
-  - name: create_booking
-    description: Create a new photoshoot booking.
-    source_operation: openapi/snappr-openapi.yml#createBooking
-  - name: list_bookings
-    description: List all bookings.
-    source_operation: openapi/snappr-openapi.yml#listBookings
-  - name: get_booking
-    description: Retrieve a single booking by id.
-    source_operation: openapi/snappr-openapi.yml#getBooking
-  - name: list_booking_images
-    description: List all images for a booking.
-    source_operation: openapi/snappr-openapi.yml#listBookingImages
-  - name: list_booking_videos
-    description: List all videos for a booking.
-    source_operation: openapi/snappr-openapi.yml#listBookingVideos
-  - name: create_editing_job
-    description: Create a new photo editing job.
-    source_operation: openapi/snappr-openapi.yml#createEditingJob
-  - name: list_editing_jobs
-    description: List all editing jobs.
-    source_operation: openapi/snappr-openapi.yml#listEditingJobs
-  - name: get_editing_job
-    description: Retrieve a single editing job by id.
-    source_operation: openapi/snappr-openapi.yml#getEditingJob
-  - name: list_editing_job_images
-    description: List all images for an editing job.
-    source_operation: openapi/snappr-openapi.yml#listEditingJobImages
-  - name: list_presets
-    description: List all editing presets.
-    source_operation: openapi/snappr-openapi.yml#listPresets
-  - name: list_shoot_types
-    description: List all available shoot types.
-    source_operation: openapi/snappr-openapi.yml#listShootTypes
-  - name: list_editing_job_types
-    description: List all available editing job types.
-    source_operation: openapi/snappr-openapi.yml#listEditingJobTypes
+- name: get_coverage
+  description: Check Snappr coverage for a location and shoot type.
+  source_operation: openapi/snappr-openapi.yml#getCoverage
+- name: get_availability
+  description: Get available shoot start times for a location, date, shoot type and duration.
+  source_operation: openapi/snappr-openapi.yml#getAvailability
+- name: create_booking
+  description: Create a new photoshoot booking.
+  source_operation: openapi/snappr-openapi.yml#createBooking
+- name: list_bookings
+  description: List all bookings.
+  source_operation: openapi/snappr-openapi.yml#listBookings
+- name: get_booking
+  description: Retrieve a single booking by id.
+  source_operation: openapi/snappr-openapi.yml#getBooking
+- name: list_booking_images
+  description: List all images for a booking.
+  source_operation: openapi/snappr-openapi.yml#listBookingImages
+- name: list_booking_videos
+  description: List all videos for a booking.
+  source_operation: openapi/snappr-openapi.yml#listBookingVideos
+- name: create_editing_job
+  description: Create a new photo editing job.
+  source_operation: openapi/snappr-openapi.yml#createEditingJob
+- name: list_editing_jobs
+  description: List all editing jobs.
+  source_operation: openapi/snappr-openapi.yml#listEditingJobs
+- name: get_editing_job
+  description: Retrieve a single editing job by id.
+  source_operation: openapi/snappr-openapi.yml#getEditingJob
+- name: list_editing_job_images
+  description: List all images for an editing job.
+  source_operation: openapi/snappr-openapi.yml#listEditingJobImages
+- name: list_presets
+  description: List all editing presets.
+  source_operation: openapi/snappr-openapi.yml#listPresets
+- name: list_shoot_types
+  description: List all available shoot types.
+  source_operation: openapi/snappr-openapi.yml#listShootTypes
+- name: list_editing_job_types
+  description: List all available editing job types.
+  source_operation: openapi/snappr-openapi.yml#listEditingJobTypes
+deployment:
+  mode: none
+  verified: derived
+  tools: 14
+  checked: '2026-08-12'
+  source: catalog MCP census

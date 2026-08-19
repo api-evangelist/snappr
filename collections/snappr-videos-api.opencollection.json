@@ -1,0 +1,61 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Snappr Availability Videos API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Videos",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get All Videos For a Booking",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.snappr.com/bookings/:booking_uid/videos",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "booking_uid",
+                "value": "",
+                "type": "path",
+                "description": "The identifier of the booking."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of results to return."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Offset used for pagination. Defaults to 0."
+              }
+            ]
+          },
+          "docs": "Retrieves all the videos of a specific booking."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

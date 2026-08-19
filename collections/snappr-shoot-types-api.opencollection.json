@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Snappr Availability Shoot Types API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Shoot Types",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get All Shoot Types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.snappr.com/shoottypes",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Returns all available Snappr shoot types."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

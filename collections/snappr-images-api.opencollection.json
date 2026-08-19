@@ -1,0 +1,98 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Snappr Availability Images API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Images",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get All Images For a Booking",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.snappr.com/bookings/:booking_uid/images",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "booking_uid",
+                "value": "",
+                "type": "path",
+                "description": "The identifier of the booking."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of results to return."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Offset used for pagination. Defaults to 0."
+              }
+            ]
+          },
+          "docs": "Retrieves all the images of a specific booking."
+        },
+        {
+          "info": {
+            "name": "Get All Images For an Editing Job",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.snappr.com/editing-jobs/:editing_job_uid/images",
+            "headers": [
+              {
+                "name": "accept-version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "editing_job_uid",
+                "value": "",
+                "type": "path",
+                "description": "The identifier of the editing job."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of results to return."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Offset used for pagination. Defaults to 0."
+              }
+            ]
+          },
+          "docs": "Retrieves all the images of a specific editing job (source and final)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
