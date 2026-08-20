@@ -199,6 +199,8 @@ apis:
   humanURL: https://docs.snappr.com/
   baseURL: https://api.snappr.com
   tags:
+  - Image
+  tags_raw:
   - Images
   properties:
   - type: OpenAPI
