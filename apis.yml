@@ -10,6 +10,18 @@ description: >-
   and videos. Authentication is a bearer API key; a sandbox environment mirrors
   production for testing, and custom webhooks notify on booking changes. Backed
   by Foundry Group and surfaced into the API Evangelist network for enrichment.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
