@@ -1,15 +1,7 @@
 {
   "provider": "snappr",
   "sources": [
-    "snappr-availability-api-openapi.yml",
-    "snappr-bookings-api-openapi.yml",
-    "snappr-coverage-api-openapi.yml",
-    "snappr-editing-job-types-api-openapi.yml",
-    "snappr-editing-jobs-api-openapi.yml",
-    "snappr-images-api-openapi.yml",
-    "snappr-presets-api-openapi.yml",
-    "snappr-shoot-types-api-openapi.yml",
-    "snappr-videos-api-openapi.yml"
+    "_original/snappr-openapi.yml"
   ],
   "outputs": [
     "snappr-availability-api-openapi.yml",
@@ -25,6 +17,20 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "snappr-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "snappr-availability-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "snappr-bookings-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "snappr-coverage-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "snappr-editing-job-types-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "snappr-editing-jobs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "snappr-images-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "snappr-presets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "snappr-shoot-types-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "snappr-videos-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
