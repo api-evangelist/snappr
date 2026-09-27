@@ -71,13 +71,6 @@ paths:
         '401':
           $ref: '#/components/responses/Error'
 components:
-  responses:
-    Error:
-      description: Error response. See the error catalog for named error codes.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   parameters:
     AcceptVersion:
       name: accept-version
@@ -111,6 +104,13 @@ components:
           type: string
         coverage:
           type: boolean
+  responses:
+    Error:
+      description: Error response. See the error catalog for named error codes.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     bearerAuth:
       type: http

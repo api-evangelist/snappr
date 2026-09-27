@@ -46,6 +46,13 @@ paths:
           $ref: '#/components/responses/Error'
 components:
   schemas:
+    TypeRef:
+      type: object
+      properties:
+        name:
+          type: string
+        display_name:
+          type: string
     PaginatedEnvelope:
       type: object
       properties:
@@ -69,20 +76,6 @@ components:
           type: array
           items:
             type: object
-    TypeRef:
-      type: object
-      properties:
-        name:
-          type: string
-        display_name:
-          type: string
-  responses:
-    Error:
-      description: Error response. See the error catalog for named error codes.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   parameters:
     AcceptVersion:
       name: accept-version
@@ -92,6 +85,13 @@ components:
       schema:
         type: string
         default: 1.0.0
+  responses:
+    Error:
+      description: Error response. See the error catalog for named error codes.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     bearerAuth:
       type: http

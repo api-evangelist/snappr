@@ -95,6 +95,35 @@ paths:
         '404':
           $ref: '#/components/responses/Error'
 components:
+  parameters:
+    AcceptVersion:
+      name: accept-version
+      in: header
+      required: false
+      description: Requested API version (e.g. "1.0.0").
+      schema:
+        type: string
+        default: 1.0.0
+    Limit:
+      name: limit
+      in: query
+      description: Maximum number of results to return.
+      schema:
+        type: integer
+    BookingUid:
+      name: booking_uid
+      in: path
+      required: true
+      description: The identifier of the booking.
+      schema:
+        type: string
+    Offset:
+      name: offset
+      in: query
+      description: Offset used for pagination. Defaults to 0.
+      schema:
+        type: integer
+        default: 0
   schemas:
     PaginatedEnvelope:
       type: object
@@ -107,18 +136,58 @@ components:
           type: integer
         total:
           type: integer
-    Error:
+    BookingCreate:
       type: object
-      description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.
+      required:
+      - shoottype
+      - start_at
+      - duration
+      - customer_firstname
+      - customer_email
+      - customer_mobilephone
       properties:
-        name:
+        title:
           type: string
-        message:
+        latitude:
+          type: number
+        longitude:
+          type: number
+        address:
           type: string
-        problems:
+          description: Google Maps valid address; alternative to latitude/longitude.
+        shoottype:
+          type: string
+        start_at:
+          type:
+          - string
+          - 'null'
+          format: date-time
+          description: Start time in UTC. Set to null to have Snappr collect it from the end-customer.
+        duration:
+          type: integer
+        location_notes:
+          type: string
+        style_notes:
+          type: string
+        customer_firstname:
+          type: string
+        customer_surname:
+          type: string
+        customer_email:
+          type: string
+          format: email
+        customer_mobilephone:
+          type: string
+        customer_company:
+          type: string
+        internal_id:
+          type: string
+        creator_id:
+          type: string
+        tags:
           type: array
           items:
-            type: object
+            type: string
     Booking:
       type: object
       properties:
@@ -186,87 +255,18 @@ components:
           type: array
           items:
             type: string
-    BookingCreate:
+    Error:
       type: object
-      required:
-      - shoottype
-      - start_at
-      - duration
-      - customer_firstname
-      - customer_email
-      - customer_mobilephone
+      description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.
       properties:
-        title:
+        name:
           type: string
-        latitude:
-          type: number
-        longitude:
-          type: number
-        address:
+        message:
           type: string
-          description: Google Maps valid address; alternative to latitude/longitude.
-        shoottype:
-          type: string
-        start_at:
-          type:
-          - string
-          - 'null'
-          format: date-time
-          description: Start time in UTC. Set to null to have Snappr collect it from the end-customer.
-        duration:
-          type: integer
-        location_notes:
-          type: string
-        style_notes:
-          type: string
-        customer_firstname:
-          type: string
-        customer_surname:
-          type: string
-        customer_email:
-          type: string
-          format: email
-        customer_mobilephone:
-          type: string
-        customer_company:
-          type: string
-        internal_id:
-          type: string
-        creator_id:
-          type: string
-        tags:
+        problems:
           type: array
           items:
-            type: string
-  parameters:
-    Limit:
-      name: limit
-      in: query
-      description: Maximum number of results to return.
-      schema:
-        type: integer
-    Offset:
-      name: offset
-      in: query
-      description: Offset used for pagination. Defaults to 0.
-      schema:
-        type: integer
-        default: 0
-    AcceptVersion:
-      name: accept-version
-      in: header
-      required: false
-      description: Requested API version (e.g. "1.0.0").
-      schema:
-        type: string
-        default: 1.0.0
-    BookingUid:
-      name: booking_uid
-      in: path
-      required: true
-      description: The identifier of the booking.
-      schema:
-        type: string
+            type: object
   responses:
     Error:
       description: Error response. See the error catalog for named error codes.
