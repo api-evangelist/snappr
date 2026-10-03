@@ -75,22 +75,6 @@ paths:
         '401':
           $ref: '#/components/responses/Error'
 components:
-  parameters:
-    AcceptVersion:
-      name: accept-version
-      in: header
-      required: false
-      description: Requested API version (e.g. "1.0.0").
-      schema:
-        type: string
-        default: 1.0.0
-  responses:
-    Error:
-      description: Error response. See the error catalog for named error codes.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   schemas:
     Error:
       type: object
@@ -125,6 +109,22 @@ components:
           items:
             type: string
             format: date-time
+  parameters:
+    AcceptVersion:
+      name: accept-version
+      in: header
+      required: false
+      description: Requested API version (e.g. "1.0.0").
+      schema:
+        type: string
+        default: 1.0.0
+  responses:
+    Error:
+      description: Error response. See the error catalog for named error codes.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     bearerAuth:
       type: http

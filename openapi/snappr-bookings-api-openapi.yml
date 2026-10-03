@@ -96,6 +96,13 @@ paths:
           $ref: '#/components/responses/Error'
 components:
   parameters:
+    BookingUid:
+      name: booking_uid
+      in: path
+      required: true
+      description: The identifier of the booking.
+      schema:
+        type: string
     AcceptVersion:
       name: accept-version
       in: header
@@ -110,13 +117,6 @@ components:
       description: Maximum number of results to return.
       schema:
         type: integer
-    BookingUid:
-      name: booking_uid
-      in: path
-      required: true
-      description: The identifier of the booking.
-      schema:
-        type: string
     Offset:
       name: offset
       in: query
@@ -125,69 +125,6 @@ components:
         type: integer
         default: 0
   schemas:
-    PaginatedEnvelope:
-      type: object
-      properties:
-        count:
-          type: integer
-        limit:
-          type: integer
-        offset:
-          type: integer
-        total:
-          type: integer
-    BookingCreate:
-      type: object
-      required:
-      - shoottype
-      - start_at
-      - duration
-      - customer_firstname
-      - customer_email
-      - customer_mobilephone
-      properties:
-        title:
-          type: string
-        latitude:
-          type: number
-        longitude:
-          type: number
-        address:
-          type: string
-          description: Google Maps valid address; alternative to latitude/longitude.
-        shoottype:
-          type: string
-        start_at:
-          type:
-          - string
-          - 'null'
-          format: date-time
-          description: Start time in UTC. Set to null to have Snappr collect it from the end-customer.
-        duration:
-          type: integer
-        location_notes:
-          type: string
-        style_notes:
-          type: string
-        customer_firstname:
-          type: string
-        customer_surname:
-          type: string
-        customer_email:
-          type: string
-          format: email
-        customer_mobilephone:
-          type: string
-        customer_company:
-          type: string
-        internal_id:
-          type: string
-        creator_id:
-          type: string
-        tags:
-          type: array
-          items:
-            type: string
     Booking:
       type: object
       properties:
@@ -251,6 +188,69 @@ components:
         updated_at:
           type: string
           format: date-time
+        tags:
+          type: array
+          items:
+            type: string
+    PaginatedEnvelope:
+      type: object
+      properties:
+        count:
+          type: integer
+        limit:
+          type: integer
+        offset:
+          type: integer
+        total:
+          type: integer
+    BookingCreate:
+      type: object
+      required:
+      - shoottype
+      - start_at
+      - duration
+      - customer_firstname
+      - customer_email
+      - customer_mobilephone
+      properties:
+        title:
+          type: string
+        latitude:
+          type: number
+        longitude:
+          type: number
+        address:
+          type: string
+          description: Google Maps valid address; alternative to latitude/longitude.
+        shoottype:
+          type: string
+        start_at:
+          type:
+          - string
+          - 'null'
+          format: date-time
+          description: Start time in UTC. Set to null to have Snappr collect it from the end-customer.
+        duration:
+          type: integer
+        location_notes:
+          type: string
+        style_notes:
+          type: string
+        customer_firstname:
+          type: string
+        customer_surname:
+          type: string
+        customer_email:
+          type: string
+          format: email
+        customer_mobilephone:
+          type: string
+        customer_company:
+          type: string
+        internal_id:
+          type: string
+        creator_id:
+          type: string
         tags:
           type: array
           items:

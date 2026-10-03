@@ -48,15 +48,6 @@ paths:
           $ref: '#/components/responses/Error'
 components:
   schemas:
-    Preset:
-      type: object
-      properties:
-        uid:
-          type: string
-        name:
-          type: string
-        description:
-          type: string
     PaginatedEnvelope:
       type: object
       properties:
@@ -68,6 +59,15 @@ components:
           type: integer
         total:
           type: integer
+    Preset:
+      type: object
+      properties:
+        uid:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
     Error:
       type: object
       description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.

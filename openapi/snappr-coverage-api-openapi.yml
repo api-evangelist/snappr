@@ -71,15 +71,6 @@ paths:
         '401':
           $ref: '#/components/responses/Error'
 components:
-  parameters:
-    AcceptVersion:
-      name: accept-version
-      in: header
-      required: false
-      description: Requested API version (e.g. "1.0.0").
-      schema:
-        type: string
-        default: 1.0.0
   schemas:
     Error:
       type: object
@@ -104,6 +95,15 @@ components:
           type: string
         coverage:
           type: boolean
+  parameters:
+    AcceptVersion:
+      name: accept-version
+      in: header
+      required: false
+      description: Requested API version (e.g. "1.0.0").
+      schema:
+        type: string
+        default: 1.0.0
   responses:
     Error:
       description: Error response. See the error catalog for named error codes.

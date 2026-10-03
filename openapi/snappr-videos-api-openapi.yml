@@ -51,6 +51,13 @@ paths:
           $ref: '#/components/responses/Error'
 components:
   parameters:
+    BookingUid:
+      name: booking_uid
+      in: path
+      required: true
+      description: The identifier of the booking.
+      schema:
+        type: string
     AcceptVersion:
       name: accept-version
       in: header
@@ -65,13 +72,6 @@ components:
       description: Maximum number of results to return.
       schema:
         type: integer
-    BookingUid:
-      name: booking_uid
-      in: path
-      required: true
-      description: The identifier of the booking.
-      schema:
-        type: string
     Offset:
       name: offset
       in: query
@@ -80,6 +80,16 @@ components:
         type: integer
         default: 0
   schemas:
+    Video:
+      type: object
+      properties:
+        uid:
+          type: string
+        file_name:
+          type: string
+        url_original:
+          type: string
+          format: uri
     PaginatedEnvelope:
       type: object
       properties:
@@ -103,16 +113,6 @@ components:
           type: array
           items:
             type: object
-    Video:
-      type: object
-      properties:
-        uid:
-          type: string
-        file_name:
-          type: string
-        url_original:
-          type: string
-          format: uri
   responses:
     Error:
       description: Error response. See the error catalog for named error codes.

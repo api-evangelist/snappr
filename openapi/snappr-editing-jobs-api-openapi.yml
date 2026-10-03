@@ -96,46 +96,6 @@ paths:
           $ref: '#/components/responses/Error'
 components:
   schemas:
-    EditingJobCreate:
-      type: object
-      required:
-      - type
-      - preset_id
-      properties:
-        title:
-          type: string
-        type:
-          type: string
-        images:
-          type:
-          - array
-          - 'null'
-          description: Source images. Set to null to have Snappr collect them from a third-party uploader.
-          items:
-            type: object
-            properties:
-              file_name:
-                type: string
-              url_source:
-                type: string
-                format: uri
-            required:
-            - url_source
-        uploader_firstname:
-          type: string
-        uploader_surname:
-          type: string
-        uploader_email:
-          type: string
-          format: email
-        uploader_mobilephone:
-          type: string
-        uploader_company:
-          type: string
-        internal_id:
-          type: string
-        preset_id:
-          type: string
     PaginatedEnvelope:
       type: object
       properties:
@@ -182,6 +142,46 @@ components:
         updated_at:
           type: string
           format: date-time
+    EditingJobCreate:
+      type: object
+      required:
+      - type
+      - preset_id
+      properties:
+        title:
+          type: string
+        type:
+          type: string
+        images:
+          type:
+          - array
+          - 'null'
+          description: Source images. Set to null to have Snappr collect them from a third-party uploader.
+          items:
+            type: object
+            properties:
+              file_name:
+                type: string
+              url_source:
+                type: string
+                format: uri
+            required:
+            - url_source
+        uploader_firstname:
+          type: string
+        uploader_surname:
+          type: string
+        uploader_email:
+          type: string
+          format: email
+        uploader_mobilephone:
+          type: string
+        uploader_company:
+          type: string
+        internal_id:
+          type: string
+        preset_id:
+          type: string
     Error:
       type: object
       description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.
@@ -203,12 +203,6 @@ components:
       schema:
         type: string
         default: 1.0.0
-    Limit:
-      name: limit
-      in: query
-      description: Maximum number of results to return.
-      schema:
-        type: integer
     EditingJobUid:
       name: editing_job_uid
       in: path
@@ -216,6 +210,12 @@ components:
       description: The identifier of the editing job.
       schema:
         type: string
+    Limit:
+      name: limit
+      in: query
+      description: Maximum number of results to return.
+      schema:
+        type: integer
     Offset:
       name: offset
       in: query
