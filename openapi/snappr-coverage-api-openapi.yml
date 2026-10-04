@@ -71,7 +71,25 @@ paths:
         '401':
           $ref: '#/components/responses/Error'
 components:
+  responses:
+    Error:
+      description: Error response. See the error catalog for named error codes.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   schemas:
+    Coverage:
+      type: object
+      properties:
+        latitude:
+          type: number
+        longitude:
+          type: number
+        shoottype:
+          type: string
+        coverage:
+          type: boolean
     Error:
       type: object
       description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.
@@ -84,17 +102,6 @@ components:
           type: array
           items:
             type: object
-    Coverage:
-      type: object
-      properties:
-        latitude:
-          type: number
-        longitude:
-          type: number
-        shoottype:
-          type: string
-        coverage:
-          type: boolean
   parameters:
     AcceptVersion:
       name: accept-version
@@ -104,13 +111,6 @@ components:
       schema:
         type: string
         default: 1.0.0
-  responses:
-    Error:
-      description: Error response. See the error catalog for named error codes.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   securitySchemes:
     bearerAuth:
       type: http

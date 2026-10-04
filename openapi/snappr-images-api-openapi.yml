@@ -81,6 +81,13 @@ paths:
           $ref: '#/components/responses/Error'
 components:
   parameters:
+    Offset:
+      name: offset
+      in: query
+      description: Offset used for pagination. Defaults to 0.
+      schema:
+        type: integer
+        default: 0
     BookingUid:
       name: booking_uid
       in: path
@@ -109,25 +116,7 @@ components:
       description: Maximum number of results to return.
       schema:
         type: integer
-    Offset:
-      name: offset
-      in: query
-      description: Offset used for pagination. Defaults to 0.
-      schema:
-        type: integer
-        default: 0
   schemas:
-    PaginatedEnvelope:
-      type: object
-      properties:
-        count:
-          type: integer
-        limit:
-          type: integer
-        offset:
-          type: integer
-        total:
-          type: integer
     Image:
       type: object
       properties:
@@ -141,15 +130,6 @@ components:
         url_thumb:
           type: string
           format: uri
-    EditingJobImage:
-      type: object
-      properties:
-        uid:
-          type: string
-        source:
-          $ref: '#/components/schemas/Image'
-        final:
-          $ref: '#/components/schemas/Image'
     Error:
       type: object
       description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.
@@ -162,6 +142,26 @@ components:
           type: array
           items:
             type: object
+    PaginatedEnvelope:
+      type: object
+      properties:
+        count:
+          type: integer
+        limit:
+          type: integer
+        offset:
+          type: integer
+        total:
+          type: integer
+    EditingJobImage:
+      type: object
+      properties:
+        uid:
+          type: string
+        source:
+          $ref: '#/components/schemas/Image'
+        final:
+          $ref: '#/components/schemas/Image'
   responses:
     Error:
       description: Error response. See the error catalog for named error codes.

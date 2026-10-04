@@ -46,24 +46,6 @@ paths:
           $ref: '#/components/responses/Error'
 components:
   schemas:
-    TypeRef:
-      type: object
-      properties:
-        name:
-          type: string
-        display_name:
-          type: string
-    PaginatedEnvelope:
-      type: object
-      properties:
-        count:
-          type: integer
-        limit:
-          type: integer
-        offset:
-          type: integer
-        total:
-          type: integer
     Error:
       type: object
       description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.
@@ -76,6 +58,24 @@ components:
           type: array
           items:
             type: object
+    PaginatedEnvelope:
+      type: object
+      properties:
+        count:
+          type: integer
+        limit:
+          type: integer
+        offset:
+          type: integer
+        total:
+          type: integer
+    TypeRef:
+      type: object
+      properties:
+        name:
+          type: string
+        display_name:
+          type: string
   parameters:
     AcceptVersion:
       name: accept-version

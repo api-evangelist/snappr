@@ -95,7 +95,48 @@ paths:
         '404':
           $ref: '#/components/responses/Error'
 components:
+  parameters:
+    Offset:
+      name: offset
+      in: query
+      description: Offset used for pagination. Defaults to 0.
+      schema:
+        type: integer
+        default: 0
+    AcceptVersion:
+      name: accept-version
+      in: header
+      required: false
+      description: Requested API version (e.g. "1.0.0").
+      schema:
+        type: string
+        default: 1.0.0
+    EditingJobUid:
+      name: editing_job_uid
+      in: path
+      required: true
+      description: The identifier of the editing job.
+      schema:
+        type: string
+    Limit:
+      name: limit
+      in: query
+      description: Maximum number of results to return.
+      schema:
+        type: integer
   schemas:
+    Error:
+      type: object
+      description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.
+      properties:
+        name:
+          type: string
+        message:
+          type: string
+        problems:
+          type: array
+          items:
+            type: object
     PaginatedEnvelope:
       type: object
       properties:
@@ -182,47 +223,6 @@ components:
           type: string
         preset_id:
           type: string
-    Error:
-      type: object
-      description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.
-      properties:
-        name:
-          type: string
-        message:
-          type: string
-        problems:
-          type: array
-          items:
-            type: object
-  parameters:
-    AcceptVersion:
-      name: accept-version
-      in: header
-      required: false
-      description: Requested API version (e.g. "1.0.0").
-      schema:
-        type: string
-        default: 1.0.0
-    EditingJobUid:
-      name: editing_job_uid
-      in: path
-      required: true
-      description: The identifier of the editing job.
-      schema:
-        type: string
-    Limit:
-      name: limit
-      in: query
-      description: Maximum number of results to return.
-      schema:
-        type: integer
-    Offset:
-      name: offset
-      in: query
-      description: Offset used for pagination. Defaults to 0.
-      schema:
-        type: integer
-        default: 0
   responses:
     Error:
       description: Error response. See the error catalog for named error codes.

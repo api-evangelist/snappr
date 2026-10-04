@@ -96,6 +96,13 @@ paths:
           $ref: '#/components/responses/Error'
 components:
   parameters:
+    Offset:
+      name: offset
+      in: query
+      description: Offset used for pagination. Defaults to 0.
+      schema:
+        type: integer
+        default: 0
     BookingUid:
       name: booking_uid
       in: path
@@ -117,14 +124,19 @@ components:
       description: Maximum number of results to return.
       schema:
         type: integer
-    Offset:
-      name: offset
-      in: query
-      description: Offset used for pagination. Defaults to 0.
-      schema:
-        type: integer
-        default: 0
   schemas:
+    Error:
+      type: object
+      description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.
+      properties:
+        name:
+          type: string
+        message:
+          type: string
+        problems:
+          type: array
+          items:
+            type: object
     Booking:
       type: object
       properties:
@@ -192,17 +204,6 @@ components:
           type: array
           items:
             type: string
-    PaginatedEnvelope:
-      type: object
-      properties:
-        count:
-          type: integer
-        limit:
-          type: integer
-        offset:
-          type: integer
-        total:
-          type: integer
     BookingCreate:
       type: object
       required:
@@ -255,18 +256,17 @@ components:
           type: array
           items:
             type: string
-    Error:
+    PaginatedEnvelope:
       type: object
-      description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.
       properties:
-        name:
-          type: string
-        message:
-          type: string
-        problems:
-          type: array
-          items:
-            type: object
+        count:
+          type: integer
+        limit:
+          type: integer
+        offset:
+          type: integer
+        total:
+          type: integer
   responses:
     Error:
       description: Error response. See the error catalog for named error codes.
