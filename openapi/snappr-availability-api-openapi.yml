@@ -76,6 +76,18 @@ paths:
           $ref: '#/components/responses/Error'
 components:
   schemas:
+    Error:
+      type: object
+      description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.
+      properties:
+        name:
+          type: string
+        message:
+          type: string
+        problems:
+          type: array
+          items:
+            type: object
     Availability:
       type: object
       properties:
@@ -97,25 +109,6 @@ components:
           items:
             type: string
             format: date-time
-    Error:
-      type: object
-      description: Snappr error envelope. Named error in the response body with an optional Problems field on validation errors.
-      properties:
-        name:
-          type: string
-        message:
-          type: string
-        problems:
-          type: array
-          items:
-            type: object
-  responses:
-    Error:
-      description: Error response. See the error catalog for named error codes.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   parameters:
     AcceptVersion:
       name: accept-version
@@ -125,6 +118,13 @@ components:
       schema:
         type: string
         default: 1.0.0
+  responses:
+    Error:
+      description: Error response. See the error catalog for named error codes.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     bearerAuth:
       type: http
